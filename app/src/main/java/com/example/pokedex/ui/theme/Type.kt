@@ -15,7 +15,7 @@ val Roboto = FontFamily(
     Font(R.font.roboto_bold, FontWeight.Bold),
 )
 
-val RobotoCondensed = FontFamily(
+val RobotoItalics = FontFamily(// used in place of the condensed
     Font(R.font.roboto_lightitalic, FontWeight.Light),
     Font(R.font.roboto_mediumitalic, FontWeight.Normal),
 )
