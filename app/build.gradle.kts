@@ -53,7 +53,12 @@ android {
 dependencies {
 
     val compose_version = "1.6.4"
+    val kotlin_version = "1.9.0"
 
+    //kotlin
+    implementation ("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version")
+
+    //android
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation ("com.google.android.material:material:1.11.0")
@@ -68,7 +73,7 @@ dependencies {
     androidTestImplementation ("androidx.compose.ui:ui-test-junit4:$compose_version")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
 
-
+    
     implementation ("androidx.compose.material:material-icons-core:$compose_version")
     implementation ("androidx.compose.material:material-icons-extended:$compose_version")
     implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
