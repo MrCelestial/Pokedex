@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.internal.Kapt3GradleSubplugin.Companion.isIncrementalKapt
-
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -57,7 +55,7 @@ dependencies {
     val compose_version = "1.6.4"
 
     implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.appcompat:appcompat:$compose_version")
+    implementation("androidx.appcompat:appcompat:1.6.1")
     implementation ("com.google.android.material:material:1.11.0")
     implementation ("androidx.compose.ui:ui:$compose_version")
     implementation ("androidx.compose.material:material:$compose_version")
@@ -69,10 +67,12 @@ dependencies {
     androidTestImplementation ("androidx.test.ext:junit:1.1.5")
     androidTestImplementation ("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation ("androidx.compose.ui:ui-test-junit4:$compose_version")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
+
 
     implementation ("androidx.compose.material:material-icons-core:$compose_version")
     implementation ("androidx.compose.material:material-icons-extended:$compose_version")
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+    implementation ("androidx.lifecycle:lifecycle-view-model-compose:2.7.0")
     implementation ("androidx.navigation:navigation-compose:2.7.7")
     implementation ("androidx.constraintlayout:constraintlayout-compose:1.0.1")
     debugImplementation("androidx.compose.ui:ui-tooling")
@@ -98,16 +98,17 @@ dependencies {
     // Coil
     implementation ("io.coil-kt:coil:1.1.1")
     implementation ("com.google.accompanist:accompanist-coil:0.7.0")
+
     //Dagger - Hilt
     implementation ("com.google.dagger:hilt-android:2.49")
-    kapt ("com.google.dagger:hilt-android-compiler:2.33-beta")
-    implementation ("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
+    kapt ("com.google.dagger:hilt-android-compiler:2.44")
+    implementation ("androidx.hilt:hilt-lifecycle-view-model:1.0.0-alpha03")
     kapt ("androidx.hilt:hilt-compiler:1.2.0")
     implementation ("androidx.hilt:hilt-navigation-compose:1.2.0")
-
-
-
-
+}
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }
 
 
