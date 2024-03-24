@@ -1,8 +1,9 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    kotlin("kapt")
-    id("com.google.dagger.hilt.android")}
+    id ("com.google.devtools.ksp")
+    id("com.google.dagger.hilt.android")
+}
 
 android {
     namespace = "com.example.pokedex"
@@ -41,7 +42,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.5"
     }
     packaging {
         resources {
@@ -71,7 +72,7 @@ dependencies {
     androidTestImplementation ("androidx.test.ext:junit:1.1.5")
     androidTestImplementation ("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation ("androidx.compose.ui:ui-test-junit4:$compose_version")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    ksp("com.google.dagger:hilt-android-compiler:2.44")
 
     
     implementation ("androidx.compose.material:material-icons-core:$compose_version")
@@ -106,14 +107,14 @@ dependencies {
 
     //Dagger - Hilt
     implementation ("com.google.dagger:hilt-android:2.48")
-    kapt ("com.google.dagger:hilt-android-compiler:2.44")
+    ksp ("com.google.dagger:hilt-android-compiler:2.44")
     //implementation ("androidx.hilt:hilt-lifecycle-view-model:1.0.0-alpha03")
-    kapt ("androidx.hilt:hilt-compiler:1.2.0")
+    ksp ("androidx.hilt:hilt-compiler:1.2.0")
     implementation ("androidx.hilt:hilt-navigation-compose:1.2.0")
 }
 // Allow references to generated code
-kapt {
-    correctErrorTypes = true
-}
+//ksp {
+//    correctErrorTypes = true
+//}
 
 
