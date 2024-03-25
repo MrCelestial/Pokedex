@@ -53,6 +53,7 @@ android {
 
 dependencies {
 
+    implementation("androidx.palette:palette-ktx:1.0.0")
     val compose_version = "1.6.4"
     val kotlin_version = "1.9.0"
 
