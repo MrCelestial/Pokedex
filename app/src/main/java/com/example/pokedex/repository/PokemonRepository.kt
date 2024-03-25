@@ -6,8 +6,9 @@ import com.example.pokedex.data.remote.responses.PokemonList
 import com.example.pokedex.util.Resource
 import dagger.hilt.android.scopes.ActivityScoped
 import javax.inject.Inject
+import javax.inject.Singleton
 
-@ActivityScoped
+@Singleton
 class PokemonRepository @Inject constructor(
     private val api: PokeApi
 ){

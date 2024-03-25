@@ -15,9 +15,9 @@ val Roboto = FontFamily(
     Font(R.font.roboto_bold, FontWeight.Bold),
 )
 
-val RobotoItalics = FontFamily(// used in place of the condensed
-    Font(R.font.roboto_lightitalic, FontWeight.Light),
-    Font(R.font.roboto_mediumitalic, FontWeight.Normal),
+val RobotoMedium = FontFamily(// used in place of the condensed
+    Font(R.font.roboto_medium, FontWeight.Light),
+    Font(R.font.roboto_medium, FontWeight.Normal),
 )
 
 // Set of Material typography styles to start with
