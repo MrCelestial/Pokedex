@@ -11,7 +11,7 @@ This is a Pokedex App developed using Android Studio. The app follows the Model-
 ## Technologies Used
 - **Language**: Kotlin
 - **Architecture**: MVVM
-- **Libraries**: Retrofit for network calls, coil (it is mostly deprecated) for image loading.
+- **Libraries**: Retrofit for network calls, Coil (it is mostly deprecated) for image loading.
 
 ## Setup
 1. Clone the repository.
